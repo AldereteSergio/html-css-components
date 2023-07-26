@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+}
+.nivel2 {
+    position: relative;
+}
+
+.nivel3 {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nivel3 li {
+    float: left;
+}
+
+.nivel3 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;    
+}
+
+.menuDesplegable {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menuDesplegable > .submenu{
+    position: absolute;
+    left: auto;
+}
+
+.submenu {
+    opacity: 0;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    position: absolute;
+    vertical-align: initial;
+    padding: 0%;
+    height: auto;
+    width: auto;
+    top: 100%;
+    left: auto;
+    background-color: red;
+    list-style-type: none;
+}
+
+.submenu li a {
+    text-align: left;
+}
+
+/* adding hover */
+.nivel3 li:hover {
+    background-color: #111;
+}
+
+/* cuando se mueve el mouse al menu, se abre el submenu*/
+.menuDesplegable:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    /*animation-name: pulse, mostrar;
+    animation-delay: 0s, 0s;
+    animation-duration: 1s, 0.2s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1), linear;
+    animation-iteration-count: infinite, 1;*/
+}
+/*
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(13, 255, 0, 0.416);
+        box-shadow: 0 0 0 0 rgba(13, 255, 0, 0.416);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 30px rgba(37, 218, 27, 0.104);
+        box-shadow: 0 0 0 30px rgba(37, 218, 27, 0.104);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+
+@keyframes mostrar {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}*/
